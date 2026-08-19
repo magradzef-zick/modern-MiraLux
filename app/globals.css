@@ -1,0 +1,71 @@
+@import "tailwindcss";
+
+:root {
+  --ink: #0d1a20;
+  --ink-2: #142a33;
+  --teal: #1c7c93;
+  --teal-light: #4fb3c7;
+  --cobalt: #1e3a5f;
+  --sand: #efe6d3;
+  --sand-2: #e4d5b0;
+  --terracotta: #c1693b;
+  --gold: #c6a15b;
+  --cream: #f6efe0;
+}
+
+@theme inline {
+  --color-ink: var(--ink);
+  --color-ink-2: var(--ink-2);
+  --color-teal: var(--teal);
+  --color-teal-light: var(--teal-light);
+  --color-cobalt: var(--cobalt);
+  --color-sand: var(--sand);
+  --color-sand-2: var(--sand-2);
+  --color-terracotta: var(--terracotta);
+  --color-gold: var(--gold);
+  --color-cream: var(--cream);
+  --font-display: var(--font-display);
+  --font-body: var(--font-body);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--sand);
+  color: var(--ink);
+  font-family: var(--font-body), sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+:focus-visible {
+  outline: 2px solid var(--gold);
+  outline-offset: 3px;
+}
+
+.font-display {
+  font-family: var(--font-display), serif;
+}
+
+/* Girih-inspired star-cross tile, hand-drawn: the site's signature ornament.
+   Used as a repeating background and as standalone dividers. */
+.girih-bg {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='80' height='80' viewBox='0 0 80 80'%3E%3Cg fill='none' stroke='%23c6a15b' stroke-width='0.75' stroke-opacity='0.35'%3E%3Cpath d='M40 2 L58 20 L40 38 L22 20 Z'/%3E%3Cpath d='M40 42 L58 60 L40 78 L22 60 Z'/%3E%3Cpath d='M0 20 L18 20 M62 20 L80 20 M0 60 L18 60 M62 60 L80 60'/%3E%3Ccircle cx='40' cy='40' r='6'/%3E%3C/g%3E%3C/svg%3E");
+  background-size: 80px 80px;
+}
