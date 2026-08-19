@@ -11,27 +11,29 @@ export function Hero() {
         sizes="100vw"
         className="object-cover"
       />
-      <div className="absolute inset-0 bg-gradient-to-t from-ink via-ink/60 to-ink/20" />
-      <div className="absolute inset-0 bg-gradient-to-r from-ink/70 via-transparent to-transparent" />
+      <div className="absolute inset-0 bg-gradient-to-t from-ink from-10% via-ink/55 via-45% to-transparent" />
+      <div className="absolute inset-0 bg-gradient-to-r from-ink/60 via-transparent to-transparent" />
 
       <div className="relative z-10 mx-auto w-full max-w-7xl px-5 pb-16 pt-40 sm:px-8 sm:pb-24">
-        <p className="mb-5 inline-flex items-center gap-2 rounded-full border border-gold/40 px-4 py-1.5 text-xs tracking-[0.2em] text-gold uppercase">
-          С 2009 года · 17 лет с путешественниками
+        <p className="mb-6 flex items-center gap-3 text-xs tracking-[0.3em] text-cream/60 uppercase">
+          <span className="h-px w-8 bg-gold" />
+          С 2009 года — 17 лет в туризме
         </p>
-        <h1 className="font-display max-w-3xl text-5xl leading-[1.05] text-cream sm:text-6xl md:text-7xl">
-          Шёлковый путь <em className="text-gold font-normal">начинается</em>{" "}
-          с одного звонка
+        <h1 className="font-display max-w-3xl text-6xl leading-[1.02] font-normal text-cream sm:text-7xl md:text-8xl">
+          Шёлковый путь
+          <br />
+          <em className="text-gold font-normal">начинается</em> здесь
         </h1>
-        <p className="mt-6 max-w-xl text-lg text-cream/80">
-          MIRA‑LUX — туристическая компания в Ташкенте: авторские туры по Самарканду,
-          Бухаре и Хиве, а также путешествия по всему миру. Визы, авиабилеты, отели и
-          гиды — под ключ.
+        <p className="mt-7 max-w-md text-base leading-relaxed text-cream/65">
+          MIRA‑LUX — туристическая компания в Ташкенте: маршруты по Самарканду,
+          Бухаре и Хиве, а также путешествия по всему миру. Визы, авиабилеты,
+          отели и гиды — под ключ.
         </p>
 
-        <div className="mt-9 flex flex-wrap items-center gap-4">
+        <div className="mt-10 flex flex-wrap items-center gap-8">
           <a
             href="#packages"
-            className="rounded-full bg-gold px-7 py-3.5 text-sm font-medium text-ink transition hover:bg-teal-light"
+            className="bg-gold px-8 py-4 text-sm font-medium tracking-wide text-ink transition hover:bg-cream"
           >
             Подобрать тур
           </a>
@@ -39,9 +41,10 @@ export function Hero() {
             href="https://instagram.com/miraluxtravelagency"
             target="_blank"
             rel="noopener noreferrer"
-            className="rounded-full border border-cream/40 px-7 py-3.5 text-sm text-cream transition hover:border-gold hover:text-gold"
+            className="group inline-flex items-center gap-2 text-sm text-cream/80 transition hover:text-gold"
           >
             Написать в Instagram
+            <span className="transition group-hover:translate-x-1">→</span>
           </a>
         </div>
       </div>
